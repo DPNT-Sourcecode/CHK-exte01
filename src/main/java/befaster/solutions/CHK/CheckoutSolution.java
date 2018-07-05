@@ -11,18 +11,20 @@ public class CheckoutSolution {
         items = skus.split(" ");
         Set<Integer> prices = new TreeSet<>();
         
-        if (skus().length == 0) {
+        if (skus.length() == 0) {
             return 0;
         }
 
-        if (skus().length == 1) {
+        if (skus.length() == 1) {
             if (skus.equals("A")) {
                 return 50;
             } else if (skus.equals("B")) {
                 return 30;
             } else if (skus.equals("C")) {
                 return 20;
-            } else if (skus)
+            } else if (skus.equals("D")) {
+                return 15;
+            }
         }
         
         for (int i = 0; i < items.length; i++) {
