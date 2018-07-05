@@ -19,7 +19,7 @@ public class CheckoutSolution {
         
         String [] items = new String[100];
         items = skus.split(" ");
-        Set<Integer> prices = new TreeSet<>();
+        Set<Integer> prices = new TreeSet<Integer>();
         
         if (skus.length() == 0) {
             return 0;
@@ -53,14 +53,12 @@ public class CheckoutSolution {
             }
         }
 
-        System.out.println("here");
-
+        System.out.println("SIZE: " + prices.size())
         Iterator<Integer> itr = prices.iterator();
         int countA = 0;
         int countB = 0;
         while (itr.hasNext()) {
             int a = itr.next();
-            System.out.println("itr: " + a);
             if (a == 50) {
                 countA++;
             } else if (a == 30) {
