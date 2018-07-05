@@ -65,18 +65,33 @@ public class CheckoutSolution {
 
         if (countA > 2) {
             while (countA >= 3) {
-                prices.remove(50);
-                prices.remove(50);
-                prices.remove(50);
-                prices.add(130);
+                int removed = 0;
+                for (int i = 0; i < prices.size(); i++) {
+                    if (prices[i] == 50) {
+                        prices.remove(i);
+                        removed++;
+                    }
+                    if (removed == 3) {
+                        prices.add(130);
+                        break;
+                    }
+                }
             }
         }
 
         if (countB > 1) {
             while (countB >= 2) {
-                prices.remove(30);
-                prices.remove(30);
-                prices.add(45);
+                int removed = 0;
+                for (int i = 0; i < prices.size(); i++) {
+                    if (prices.get(i) == 30) {
+                        prices.remove(i);
+                        removed++;
+                    }
+                    if (removed == 2) {
+                        prices.add(45);
+                        break;
+                    }
+                }
             }
         }
 
