@@ -11,7 +11,11 @@ public class CheckoutSolution {
         items = skus.split(" ");
         Set<Integer> prices = new TreeSet<>();
         
-        for (int i = 0; i < items.length; i++) {
+        if (items.lengh() == 0) {
+            return 0;
+        }
+        
+        for (int i = 0; i < items.length(); i++) {
             if (items[i].equals("A")) {
                 prices.add(50);
             } else if (items[i].equals("B")) {
@@ -34,16 +38,21 @@ public class CheckoutSolution {
             }
         }
 
-        while (countA >= 3) {
-            prices.remove(50);
-            prices.remove(50);
-            prices.remove(50);
-            prices.add(130);
+        if (countA > 0) {
+            while (countA >= 3) {
+                prices.remove(50);
+                prices.remove(50);
+                prices.remove(50);
+                prices.add(130);
+            }
         }
-        while (countB >= 2) {
-            prices.remove(30);
-            prices.remove(30);
-            prices.add(45);
+
+        if (countB > 0) {
+            while (countB >= 2) {
+                prices.remove(30);
+                prices.remove(30);
+                prices.add(45);
+            }
         }
 
         int sum = 0;
