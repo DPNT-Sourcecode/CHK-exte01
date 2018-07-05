@@ -36,6 +36,8 @@ public class CheckoutSolution {
                 prices.add(20);
             } else if (items[i].equals("D")) {
                 prices.add(15);
+            } else{
+                return -1;
             }
         }
 
