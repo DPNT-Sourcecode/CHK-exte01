@@ -54,11 +54,4 @@ public class CheckoutSolution {
 
         return sum;
     }
-
-    public static void main(String [] args) {
-
-        CheckoutSolution s = new CheckoutSolution();
-        Integer a = s.checkout("A");
-        System.out.println(a);
-    }
 }
