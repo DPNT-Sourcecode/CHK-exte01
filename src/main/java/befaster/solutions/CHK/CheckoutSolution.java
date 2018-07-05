@@ -1,7 +1,7 @@
 package befaster.solutions.CHK;
 
 import java.util.*;
-//import befaster.runner.SolutionNotImplementedException;
+import befaster.runner.SolutionNotImplementedException;
 
 public class CheckoutSolution {
 
