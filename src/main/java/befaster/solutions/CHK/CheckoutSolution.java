@@ -82,7 +82,7 @@ public class CheckoutSolution {
         }
 
         int sum = 0;
-         Iterator<Integer> itr1 = prices.iterator();
+        Iterator<Integer> itr1 = prices.iterator();
         while (itr1.hasNext()) {
             sum += itr1.next();
         }
