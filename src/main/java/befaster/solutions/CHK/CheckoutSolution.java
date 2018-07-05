@@ -17,8 +17,6 @@ public class CheckoutSolution {
 
     public Integer checkout(String skus) {
         
-        String [] items = new String[100];
-        items = skus.split(" ");
         Set<Integer> prices = new TreeSet<Integer>();
         
         if (skus.length() == 0) {
@@ -41,19 +39,18 @@ public class CheckoutSolution {
             }
         }
         
-        for (int i = 0; i < items.length; i++) {
-            if (items[i].equals("A")) {
+        for (int i = 0; i < skus.length(); i++) {
+            if (skus.charAt(i) == 'A') {
                 prices.add(50);
-            } else if (items[i].equals("B")) {
+            } else if (skus.charAt(i) == 'B') {
                 prices.add(30);
-            } else if (items[i].equals("C")) {
+            } else if (skus.charAt(i) == 'C') {
                 prices.add(20);
-            } else if (items[i].equals("D")) {
+            } else if (skus.charAt(i) == 'D') {
                 prices.add(15);
             }
         }
 
-        System.out.println("SIZE: " + prices.size());
         Iterator<Integer> itr = prices.iterator();
         int countA = 0;
         int countB = 0;
