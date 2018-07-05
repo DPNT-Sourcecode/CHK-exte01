@@ -7,16 +7,22 @@ public class CheckoutSolution {
 
     public Integer checkout(String skus) {
         
-        String [] items = new String[1000];
+        String [] items = new String[100];
         items = skus.split(" ");
         Set<Integer> prices = new TreeSet<>();
         
-        if (items.length == 0) {
+        if (skus().length == 0) {
             return 0;
         }
 
-        if (items[0].equals("B")) {
-            return 30;
+        if (skus().length == 1) {
+            if (skus.equals("A")) {
+                return 50;
+            } else if (skus.equals("B")) {
+                return 30;
+            } else if (skus.equals("C")) {
+                return 20;
+            } else if (skus)
         }
         
         for (int i = 0; i < items.length; i++) {
