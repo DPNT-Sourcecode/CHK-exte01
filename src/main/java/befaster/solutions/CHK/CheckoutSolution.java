@@ -1,6 +1,6 @@
 package befaster.solutions.CHK;
 
-
+import java.util.*;
 import befaster.runner.SolutionNotImplementedException;
 
 public class CheckoutSolution {
@@ -9,7 +9,7 @@ public class CheckoutSolution {
         
         String [] items = new String[1000];
         items = skus.split(" ");
-        Set<Integer> prices = new TreeSet<>();
+        TreeSet prices = new TreeSet();
         
         for (int i = 0; i < items.length; i++) {
             if (items[i].equals("A")) {
