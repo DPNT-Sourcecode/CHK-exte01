@@ -56,9 +56,9 @@ public class CheckoutSolution {
         }
 
         int sum = 0;
-        itr = prices.iterator();
-        while (itr.hasNext()) {
-            sum += itr.next();
+         Iterator<Integer> itr1 = prices.iterator();
+        while (itr1.hasNext()) {
+            sum += itr1.next();
         }
 
         return sum;
