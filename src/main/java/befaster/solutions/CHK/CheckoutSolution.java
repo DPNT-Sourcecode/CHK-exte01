@@ -1,7 +1,7 @@
 package befaster.solutions.CHK;
 
 import java.util.*;
-import befaster.runner.SolutionNotImplementedException;
+//import befaster.runner.SolutionNotImplementedException;
 
 public class CheckoutSolution {
 
@@ -9,7 +9,7 @@ public class CheckoutSolution {
         
         String [] items = new String[1000];
         items = skus.split(" ");
-        TreeSet prices = new TreeSet();
+        Set<Integer> prices = new TreeSet<>();
         
         for (int i = 0; i < items.length; i++) {
             if (items[i].equals("A")) {
@@ -53,5 +53,12 @@ public class CheckoutSolution {
         }
 
         return sum;
+    }
+
+    public static void main(String [] args) {
+
+        CheckoutSolution s = new CheckoutSolution();
+        Integer a = s.checkout("A");
+        System.out.println(a);
     }
 }

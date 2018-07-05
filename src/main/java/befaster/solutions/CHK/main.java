@@ -1,9 +1,10 @@
-package befaster.solutions.CHK;
+//package befaster.solutions.CHK;
 
 import java.util.*;
-import befaster.runner.SolutionNotImplementedException;
+//import befaster.runner.SolutionNotImplementedException;
 
-public class Main {
+
+public class main {
 
     public static void main(String [] args) {
 
