@@ -6,6 +6,7 @@ public class CheckoutSolution {
     public Integer checkout(String skus) {
         
         String [] items = new String[100];
-        skus = items.split(" ");
+        items = skus.split(" ");
+        return 0;
     }
 }
