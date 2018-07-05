@@ -53,7 +53,7 @@ public class CheckoutSolution {
             }
         }
 
-        System.out.println("SIZE: " + prices.size())
+        System.out.println("SIZE: " + prices.size());
         Iterator<Integer> itr = prices.iterator();
         int countA = 0;
         int countB = 0;
