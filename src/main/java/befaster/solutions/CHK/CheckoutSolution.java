@@ -53,13 +53,17 @@ public class CheckoutSolution {
             }
         }
 
+        System.out.println("here");
+
         Iterator<Integer> itr = prices.iterator();
         int countA = 0;
         int countB = 0;
         while (itr.hasNext()) {
-            if (itr.next() == 50) {
+            int a = itr.next();
+            System.out.println("itr: " + a);
+            if (a == 50) {
                 countA++;
-            } else if (itr.next() == 30) {
+            } else if (a == 30) {
                 countB++;
             }
         }
