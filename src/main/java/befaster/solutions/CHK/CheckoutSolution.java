@@ -5,10 +5,10 @@ import befaster.runner.SolutionNotImplementedException;
 
 public class CheckoutSolution {
 
-    public boolean correct(String a) {
+    public boolean correct(String c) {
 
-        for (int i = 0; i < a.length(); i++) {
-            if (!c[i].equals("A") && !c[i].equals("B") && c.equals("C") && !c.equals("D")) {
+        for (int i = 0; i < c.length(); i++) {
+            if (c.charAt(i) == 'A' && c.charAt(i) != 'B' && c.charAt(i) != 'C' && c.charAt(i) != 'D') {
                 return false;
             }
         }
