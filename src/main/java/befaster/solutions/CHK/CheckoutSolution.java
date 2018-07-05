@@ -34,7 +34,10 @@ public class CheckoutSolution {
         }
 
         while (itr.hasNext()) {
-            while ()
+            while (countA >= 3) {
+                prices.remove(50);
+                
+            }
         }
     }
 }
