@@ -8,7 +8,7 @@ public class CheckoutSolution {
     public boolean correct(String c) {
 
         for (int i = 0; i < c.length(); i++) {
-            if (c.charAt(i) == 'A' && c.charAt(i) != 'B' && c.charAt(i) != 'C' && c.charAt(i) != 'D') {
+            if (c.charAt(i) != 'A' && c.charAt(i) != 'B' && c.charAt(i) != 'C' && c.charAt(i) != 'D') {
                 return false;
             }
         }
@@ -20,13 +20,13 @@ public class CheckoutSolution {
         String [] items = new String[100];
         items = skus.split(" ");
         Set<Integer> prices = new TreeSet<>();
-
-        if (!correct(skus)) {
-            return -1;
-        }
         
         if (skus.length() == 0) {
             return 0;
+        }
+
+        if (!correct(skus)) {
+            return -1;
         }
 
         if (skus.length() == 1) {
