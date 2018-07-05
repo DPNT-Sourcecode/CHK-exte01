@@ -17,7 +17,6 @@ public class CheckoutSolution {
 
     public Integer checkout(String skus) {
         
-        //Set<Integer> prices = new TreeSet<Integer>();
         ArrayList<Integer> prices = new ArrayList<Integer>();
         
         if (skus.length() == 0) {
@@ -76,7 +75,7 @@ public class CheckoutSolution {
         if (countB > 0) {
             while (countB >= 2) {
                 prices.remove(new Integer(30));
-                prices.remove(30);
+                prices.remove(new Integer(30));
                 prices.add(45);
             }
         }
