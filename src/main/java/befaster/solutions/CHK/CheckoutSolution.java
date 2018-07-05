@@ -3,6 +3,7 @@ package befaster.solutions.CHK;
 import befaster.runner.SolutionNotImplementedException;
 
 public class CheckoutSolution {
+
     public Integer checkout(String skus) {
         
         String [] items = new String[1000];
@@ -24,10 +25,16 @@ public class CheckoutSolution {
         Iterator<Integer> itr = prices.iterator();
         int countA = 0;
         int countB = 0;
-        while (its.hasNext()) {
-            if (itr.next().equals())
+        while (itr.hasNext()) {
+            if (itr.next() == 50) {
+                countA++;
+            } else if (itr.next() == 30) {
+                countB++;
+            }
         }
 
-
+        while (itr.hasNext()) {
+            while ()
+        }
     }
 }
