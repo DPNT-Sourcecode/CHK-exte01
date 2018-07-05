@@ -18,6 +18,7 @@ public class CheckoutSolution {
     public Integer checkout(String skus) {
         
         Set<Integer> prices = new TreeSet<Integer>();
+        ArrayList<
         
         if (skus.length() == 0) {
             return 0;
