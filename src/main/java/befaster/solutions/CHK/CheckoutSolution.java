@@ -5,11 +5,25 @@ import befaster.runner.SolutionNotImplementedException;
 
 public class CheckoutSolution {
 
+    public boolean correct(String a) {
+
+        for (int i = 0; i < a.length(); i++) {
+            if (!c[i].equals("A") && !c[i].equals("B") && c.equals("C") && !c.equals("D")) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public Integer checkout(String skus) {
         
         String [] items = new String[100];
         items = skus.split(" ");
         Set<Integer> prices = new TreeSet<>();
+
+        if (!correct(skus)) {
+            return -1;
+        }
         
         if (skus.length() == 0) {
             return 0;
@@ -36,8 +50,6 @@ public class CheckoutSolution {
                 prices.add(20);
             } else if (items[i].equals("D")) {
                 prices.add(15);
-            } else{
-                return -1;
             }
         }
 
