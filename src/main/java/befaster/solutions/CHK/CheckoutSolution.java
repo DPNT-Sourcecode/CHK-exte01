@@ -11,11 +11,11 @@ public class CheckoutSolution {
         items = skus.split(" ");
         Set<Integer> prices = new TreeSet<>();
         
-        if (items.lengh() == 0) {
+        if (items.length == 0) {
             return 0;
         }
         
-        for (int i = 0; i < items.length(); i++) {
+        for (int i = 0; i < items.length; i++) {
             if (items[i].equals("A")) {
                 prices.add(50);
             } else if (items[i].equals("B")) {
