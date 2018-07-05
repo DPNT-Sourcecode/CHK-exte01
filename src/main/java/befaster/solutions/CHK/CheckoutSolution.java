@@ -10,9 +10,19 @@ public class CheckoutSolution {
         Integer [] prices = new Integer[1000];
         
         for (int i = 0; i < items.length; i++) {
-            if (str.equals("A")) {
-                prices[]
+            if (items[i].equals("A")) {
+                prices[i] = 50;
+            } else if (items[i].equals("B")) {
+                prices[i] = 30;
+            } else if (items[i].equals("C")) {
+                prices[i] = 20;
+            } else if (items[i].equals("D")) {
+                prices[i] = 15;
             }
         }
+
+        
+
+
     }
 }
