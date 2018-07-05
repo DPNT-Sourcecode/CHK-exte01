@@ -1,5 +1,6 @@
 package befaster.solutions.CHK;
 
+
 import befaster.runner.SolutionNotImplementedException;
 
 public class CheckoutSolution {
@@ -33,11 +34,24 @@ public class CheckoutSolution {
             }
         }
 
-        while (itr.hasNext()) {
-            while (countA >= 3) {
-                prices.remove(50);
-                
-            }
+        while (countA >= 3) {
+            prices.remove(50);
+            prices.remove(50);
+            prices.remove(50);
+            prices.add(130);
         }
+        while (countB >= 2) {
+            prices.remove(30);
+            prices.remove(30);
+            prices.add(45);
+        }
+
+        int sum = 0;
+        itr = prices.iterator();
+        while (itr.hasNext()) {
+            sum += itr.next();
+        }
+
+        return sum;
     }
 }
