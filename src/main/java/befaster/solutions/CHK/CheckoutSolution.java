@@ -60,6 +60,9 @@ public class CheckoutSolution {
     }
 
     public Integer checkout(String skus) {
+
+        int size = skus.length();
+        Integer [] prices = new Integer[size];
         
         initialize(skus);
 

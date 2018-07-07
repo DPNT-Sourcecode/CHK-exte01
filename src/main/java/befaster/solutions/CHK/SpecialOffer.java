@@ -2,6 +2,6 @@ public class SpecialOffer {
 
     char itemType;
 
-    public void 
+    public void itemAOffer()
 
 }
