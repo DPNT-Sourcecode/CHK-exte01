@@ -61,14 +61,6 @@ public class CheckoutSolution {
 
     public Integer checkout(String skus) {
         
-        // int size = skus.length();
-        // Integer [] prices = new Integer[size];
-        // Integer [] items = new Integer[26];
-
-        // for (int i = 0; i < 26; i++) {
-        //     items[i] = 0;
-        // }
-
         initialize(skus);
 
         Iterator<Item> itr = items.iterator();
@@ -83,57 +75,6 @@ public class CheckoutSolution {
         if (correctInput(skus) == false) {
             return -1;
         }
-        
-
-        // for (int i = 0; i < skus.length(); i++) {
-        //     if (skus.charAt(i) == 'A') {
-        //         prices[i] = 50;
-        //         items[0]++;
-        //     } else if (skus.charAt(i) == 'B') {
-        //         prices[i] = 30;
-        //         items[1]++;
-        //     } else if (skus.charAt(i) == 'C') {
-        //         prices[i] = 20;
-        //     } else if (skus.charAt(i) == 'D') {
-        //         prices[i] = 15;
-        //     } else if (skus.charAt(i) == 'E') {
-        //         prices[i] = 40;
-        //         items[4]++;
-        //     } else if (skus.charAt(i) == 'F') {
-        //         prices[i] = 10;
-        //         items[5]++;
-        //     } else if (skus.charAt(i) == 'G') {
-        //         prices[i] = 20;
-        //     } else if (skus.charAt(i) == 'H') {
-        //         prices[i] = 10;
-        //         items[7]++;
-        //     } else if (skus.charAt(i) == 'I') {
-        //         prices[i] = 35;
-        //     } else if (skus.charAt(i) == 'J') {
-        //         prices[i] = 60;
-        //     } else if (skus.charAt(i) == 'K') {
-        //         prices[i] = 80;
-        //         items[10]++;
-        //     } else if (skus.charAt(i) == 'L') {
-        //         prices[i] = 90;
-        //     } else if (skus.charAt(i) == 'M') {
-        //         prices[i] = 15;
-        //     } else if (skus.charAt(i) == 'N') {
-        //         prices[i] = 40;
-        //         items[13]++;
-        //     } else if (skus.charAt(i) == 'O') {
-        //         prices[i] = 10;
-        //     } else if (skus.charAt(i) == 'P') {
-        //         prices[i] = 50;
-        //         items[15]++;
-        //     } else if (skus.charAt(i) == 'Q') {
-        //         prices[i] = 30;
-        //         items[16]++;
-        //     } else if (skus.charAt(i) == 'R') {
-        //         prices[i] = 50;
-
-        //     }
-        // }
 
         // while (countE >= 2 && countB != 0) {
         //     for (int i = 0; i < size; i++) {
