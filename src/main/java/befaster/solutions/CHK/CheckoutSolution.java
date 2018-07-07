@@ -1,4 +1,4 @@
-//package befaster.solutions.CHK;
+package befaster.solutions.CHK;
 
 import java.util.*;
 //import befaster.runner.SolutionNotImplementedException;
@@ -46,6 +46,17 @@ public class CheckoutSolution {
             } else if (skus.charAt(i) == 'E') {
                 prices[i] = 40;
                 countE++;
+            }
+        }
+
+        while (countE >= 2) {
+            for (int i = 0; i < size; i++) {
+                if (prices[i] == 30) {
+                    prices[i] = 0;
+                    countE -= 2;
+                    countB--;
+                    break;
+                }
             }
         }
 
@@ -106,19 +117,7 @@ public class CheckoutSolution {
             sum += prices[i];
         }
 
-        while (countE >= 2) {
-            sum -= 30;
-            countE -= 2;
-        }
-
         return sum;
     }
 
-
-    public static void main(String [] args) {
-    	
-    	CheckoutSolution s = new CheckoutSolution();
-        int a = s.checkout("AABBCDAEE");
-        System.out.println(a);
-    }
 }
