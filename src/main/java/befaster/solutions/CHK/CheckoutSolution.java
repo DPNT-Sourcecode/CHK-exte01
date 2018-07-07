@@ -8,7 +8,9 @@ public class CheckoutSolution {
     public boolean correct(String c) {
 
         for (int i = 0; i < c.length(); i++) {
-            if (c.charAt(i) != 'A' && c.charAt(i) != 'B' && c.charAt(i) != 'C' && c.charAt(i) != 'D' && c.charAt(i) != 'E') {
+            if (c.charAt(i) != 'A' && c.charAt(i) != 'B' && 
+                c.charAt(i) != 'C' && c.charAt(i) != 'D' && 
+                c.charAt(i) != 'E' && c.charAt(i) != 'F') {
                 return false;
             }
         }
@@ -31,6 +33,7 @@ public class CheckoutSolution {
         int countA = 0;
         int countB = 0;
         int countE = 0;
+        int countF = 0;
 
         for (int i = 0; i < skus.length(); i++) {
             if (skus.charAt(i) == 'A') {
@@ -46,6 +49,9 @@ public class CheckoutSolution {
             } else if (skus.charAt(i) == 'E') {
                 prices[i] = 40;
                 countE++;
+            } else if (skus.charAt(i) == 'F') {
+                prices[i] = 10;
+                countF++;
             }
         }
 
@@ -58,7 +64,7 @@ public class CheckoutSolution {
                     break;
                 }
             }
-            System.out.print("E");
+           // System.out.print("E");
         }
 
         if (countA > 4) {
@@ -75,7 +81,7 @@ public class CheckoutSolution {
                         break;
                     }
                 }
-                System.out.print("A");
+              //  System.out.print("A");
             }
         }
 
@@ -93,7 +99,7 @@ public class CheckoutSolution {
                         break;
                     }
                 }
-                            System.out.print("A2");
+                // System.out.print("A2");
             }
 
         }
@@ -112,7 +118,7 @@ public class CheckoutSolution {
                         break;
                     }
                 }
-                            System.out.print("B");
+                // System.out.print("B");
             }
         }
 
