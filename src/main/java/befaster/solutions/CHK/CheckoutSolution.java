@@ -49,10 +49,9 @@ public class CheckoutSolution {
 
 
         for (int i = 0; i < skus.length(); i++) {
-            Iterator<Item> itr = items.iterator();
-            while (itr.hasNext()) {
-                if (skus.charAt(i) == itr.next().type) {
-                    itr.previous().appearances++;
+            for (Item item : items) {
+                if (item.type == skus.charAt(i)) {
+                    item.appearances++;
                     break;
                 }
             }
@@ -81,11 +80,12 @@ public class CheckoutSolution {
             return -1;
         }
 
-        Iterator<Item> itr1 = items.iterator();
         int i = 0;
 
-        while (itr1.hasNext() && i < size) {
-            Item item = itr1.next();
+        for (Item item : items) {
+            if (i >= size) {
+                break;
+            }
             if (item.appearances != 0) {
                 System.out.println("final: " + item.type + " " + item.value + " " + item.appearances);
                 int initialPrice = item.value*item.appearances;
