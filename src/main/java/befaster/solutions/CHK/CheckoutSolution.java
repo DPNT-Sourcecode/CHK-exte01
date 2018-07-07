@@ -78,6 +78,13 @@ public class CheckoutSolution {
                 prices[i] = 10;
             } else if (skus.charAt(i) == 'P') {
                 prices[i] = 50;
+                items[15]++;
+            } else if (skus.charAt(i) == 'Q') {
+                prices[i] = 30;
+                items[16]++;
+            } else if (skus.charAt(i) == 'R') {
+                prices[i] = 50;
+
             }
         }
 
@@ -90,10 +97,8 @@ public class CheckoutSolution {
                     break;
                 }
             }
-           // System.out.print("E");
         }
 
- //       if (countA >= 5) {
             while (countA >= 5) {
                 int removed = 0;
                 for (int i = 0; i < size; i++) {
@@ -107,11 +112,8 @@ public class CheckoutSolution {
                         break;
                     }
                 }
-              //  System.out.print("A");
             }
- //       }
 
-  //      if (countA >= 3) {
             while (countA >= 3) {
                 int removed = 0;
                 for (int i = 0; i < size; i++) {
@@ -125,11 +127,8 @@ public class CheckoutSolution {
                         break;
                     }
                 }
-                // System.out.print("A2");
             }
-  //      }
 
- //       if (countB >= 2) {
             while (countB >= 2) {
                 int removed = 0;
                 for (int i = 0; i < size; i++) {
@@ -143,9 +142,7 @@ public class CheckoutSolution {
                         break;
                     }
                 }
-                // System.out.print("B");
             }
-//        }
 
         while (countF >= 3) {
             for (int i = 0; i < size; i++) {
@@ -159,10 +156,8 @@ public class CheckoutSolution {
         int sum = 0;
 
         for (int i = 0; i < size; i++) {
-           // System.out.print(prices[i] + " ");
             sum += prices[i];
         }
-       // System.out.println();
 
         return sum;
     }
