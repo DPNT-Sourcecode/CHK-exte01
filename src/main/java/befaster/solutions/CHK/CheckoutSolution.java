@@ -85,11 +85,14 @@ public class CheckoutSolution {
 
         while (itr1.hasNext() && i < size) {
             Item item = itr1.next();
-            int initialPrice = item.value*item.appearances;
-            int finalPrice = specialOffer.getSpecialOffer(item.type,
-                                                        initialPrice, item.appearances);
-            prices[i] = finalPrice;
-            i++;
+            if (item.appearances != 0) {
+                int initialPrice = item.value*item.appearances;
+                int finalPrice = specialOffer.getSpecialOffer(item.type,
+                                                            initialPrice, item.appearances);
+                System.out.println("final: " + item.value);
+                prices[i] = finalPrice;
+                i++;
+            }
         }
 
         for (i = 0; i < size; i++) {
