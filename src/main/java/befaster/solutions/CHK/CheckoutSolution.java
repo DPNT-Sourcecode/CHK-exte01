@@ -5,6 +5,8 @@ import java.util.*;
 
 public class CheckoutSolution {
 
+    public ArrayList<Item> items = new ArrayList<Item>();
+
     public boolean correctInput(String c) {
 
         for (int i = 0; i < c.length(); i++) {
