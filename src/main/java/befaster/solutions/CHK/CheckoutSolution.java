@@ -19,6 +19,11 @@ public class CheckoutSolution {
         
         int size = skus.length();
         Integer [] prices = new Integer[size];
+        Integer [] items = new Integer[26];
+
+        for (int i = 0; i < 26; i++) {
+            items[i] = 0;
+        }
         
         if (skus.length() == 0) {
             return 0;
@@ -36,7 +41,7 @@ public class CheckoutSolution {
         for (int i = 0; i < skus.length(); i++) {
             if (skus.charAt(i) == 'A') {
                 prices[i] = 50;
-                countA++;
+                count[0]++;
             } else if (skus.charAt(i) == 'B') {
                 prices[i] = 30;
                 countB++;
