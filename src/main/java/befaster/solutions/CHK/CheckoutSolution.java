@@ -46,7 +46,10 @@ public class CheckoutSolution {
         items.add(new Item('Y',10));
         items.add(new Item('Z',50));
 
-        for (int i = 0; i < skus.)
+        Iterator<Item> itr = items.iterator();
+        while (itr.hasNext()) {
+            if (iterator.next())
+        }
     }
 
     public Integer checkout(String skus) {
