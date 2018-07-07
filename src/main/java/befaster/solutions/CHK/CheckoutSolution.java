@@ -63,6 +63,7 @@ public class CheckoutSolution {
 
         int size = skus.length();
         Integer [] prices = new Integer[size];
+        SpecialOffer specialOffer = new SpecialOffer();
         
         initialize(skus);
 
@@ -79,78 +80,14 @@ public class CheckoutSolution {
             return -1;
         }
 
-        // while (countE >= 2 && countB != 0) {
-        //     for (int i = 0; i < size; i++) {
-        //         if (prices[i] == 30) {
-        //             prices[i] = 0;
-        //             countE -= 2;
-        //             countB--;
-        //             break;
-        //         }
-        //     }
-        // }
+        itr = items.iterator();
+        int i = 0;
 
-        //     while (countA >= 5) {
-        //         int removed = 0;
-        //         for (int i = 0; i < size; i++) {
-        //             if (prices[i] == 50) {
-        //                 prices[i] = 0;
-        //                 countA--;
-        //                 removed++;
-        //             }
-        //             if (removed == 5) {
-        //                 prices[i] = 200;
-        //                 break;
-        //             }
-        //         }
-        //     }
+        while (itr.hasNext()) {
+            int initialPrice = itr.next().value*itr.next().appearances;
+            int finalPrice = specialOffer.
+        }
 
-        //     while (countA >= 3) {
-        //         int removed = 0;
-        //         for (int i = 0; i < size; i++) {
-        //             if (prices[i] == 50) {
-        //                 prices[i] = 0;
-        //                 countA--;
-        //                 removed++;
-        //             }
-        //             if (removed == 3) {
-        //                 prices[i] = 130;
-        //                 break;
-        //             }
-        //         }
-        //     }
-
-        //     while (countB >= 2) {
-        //         int removed = 0;
-        //         for (int i = 0; i < size; i++) {
-        //             if (prices[i] == 30) {
-        //                 prices[i] = 0;
-        //                 countB--;
-        //                 removed++;
-        //             }
-        //             if (removed == 2) {
-        //                 prices[i] = 45;
-        //                 break;
-        //             }
-        //         }
-        //     }
-
-        // while (countF >= 3) {
-        //     for (int i = 0; i < size; i++) {
-        //         if (prices[i] == 10 && countF >= 3) {
-        //             prices[i] = 0;
-        //             countF -= 3;
-        //         }
-        //     }
-        // }
-
-        // int sum = 0;
-
-        // for (int i = 0; i < size; i++) {
-        //     sum += prices[i];
-        // }
-
-        // return sum;
         return 0;
     }
 

@@ -13,6 +13,10 @@ public class SpecialOffer {
             price -= 20;
             itemsNumber -= 3;
         }
+
+        return price;
     }
+
+    
 
 }
