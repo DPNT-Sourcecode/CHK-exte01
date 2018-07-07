@@ -48,7 +48,7 @@ public class CheckoutSolution {
 
         Iterator<Item> itr = items.iterator();
         while (itr.hasNext()) {
-            if (iterator.next())
+            
         }
     }
 
