@@ -15,8 +15,6 @@ public class CheckoutSolution {
         return true;
     }
 
-    public void setValues()
-
     public Integer checkout(String skus) {
         
         int size = skus.length();
@@ -57,6 +55,15 @@ public class CheckoutSolution {
             } else if (skus.charAt(i) == 'F') {
                 prices[i] = 10;
                 items[5]++;
+            } else if (skus.charAt(i) == 'G') {
+                prices[i] = 20;
+            } else if (skus.charAt(i) == 'H') {
+                prices[i] = 10;
+                items[7]++;
+            } else if (skus.charAt(i) == 'I') {
+                prices[i] = 35;
+            } else if (skus.charAt(i) == 'J') {
+                prices[i] = 
             }
         }
 
