@@ -123,7 +123,7 @@ public class CheckoutSolution {
 
         while (countF >= 3) {
             for (int i = 0; i < size; i++) {
-                if (prices[i] == 10) {
+                if (prices[i] == 10 && countF >= 3) {
                     prices[i] = 0;
                     countF -= 3;
                 }
@@ -133,8 +133,10 @@ public class CheckoutSolution {
         int sum = 0;
 
         for (int i = 0; i < size; i++) {
+            System.out.print(prices[i] + " ");
             sum += prices[i];
         }
+        System.out.println();
 
         return sum;
     }
