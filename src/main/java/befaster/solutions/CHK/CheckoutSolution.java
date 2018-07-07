@@ -1,4 +1,4 @@
-package befaster.solutions.CHK;
+//package befaster.solutions.CHK;
 
 import java.util.*;
 //import befaster.runner.SolutionNotImplementedException;
@@ -10,7 +10,7 @@ public class CheckoutSolution {
     public boolean correctInput(String c) {
 
         for (int i = 0; i < c.length(); i++) {
-            if (c.charAt(i).isUpperCase() == false)
+            if (c.charAt(i).isUpperCase() == false) {
                 return false;
             }
         }
@@ -71,7 +71,9 @@ public class CheckoutSolution {
         initialize(skus);
 
         Iterator<Item> itr = items.iterator();
-        while (itr.hasNext())
+        while (itr.hasNext()) {
+            System.out.println(itr.next().type + " " + itr.next().appearances);
+        }
         
         if (skus.length() == 0) {
             return 0;
@@ -81,10 +83,6 @@ public class CheckoutSolution {
             return -1;
         }
         
-        // // int countA = 0;
-        // // int countB = 0;
-        // // int countE = 0;
-        // // int countF = 0;
 
         // for (int i = 0; i < skus.length(); i++) {
         //     if (skus.charAt(i) == 'A') {
@@ -211,11 +209,11 @@ public class CheckoutSolution {
         return 0;
     }
 
-    //     public static void main(String [] args) {
+    public static void main(String [] args) {
     	
-    // 	CheckoutSolution s = new CheckoutSolution();
-    //     int a = s.checkout("ABCDEFFF");
-    //     System.out.println(a);
-    // }
+    	CheckoutSolution s = new CheckoutSolution();
+        int a = s.checkout("ABCDEFFGHIJKDHASFAJFFJFWRWN");
+        System.out.println(a);
+    }
 
 }
