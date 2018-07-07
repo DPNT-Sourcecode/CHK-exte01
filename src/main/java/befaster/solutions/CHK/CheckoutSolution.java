@@ -1,4 +1,4 @@
-package befaster.solutions.CHK;
+//package befaster.solutions.CHK;
 
 import java.util.*;
 //import befaster.runner.SolutionNotImplementedException;
@@ -6,6 +6,11 @@ import java.util.*;
 public class CheckoutSolution {
 
     public ArrayList<Item> items = new ArrayList<Item>();
+
+    public static void main(String [] args) {
+        CheckoutSolution s = new CheckoutSolution();
+        System.out.println( s.checkout("AAA"));
+    }
 
     public boolean correctInput(String c) {
 
@@ -288,4 +293,5 @@ public class CheckoutSolution {
 }
 
 }
+
 
