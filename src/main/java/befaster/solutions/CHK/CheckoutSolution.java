@@ -89,6 +89,10 @@ public class CheckoutSolution {
             if (item.appearances != 0) {
                 System.out.println("final: " + item.type + " " + item.value + " " + item.appearances);
                 int initialPrice = item.value*item.appearances;
+                if (item.type == 'E') {
+                    int finalPrice = specialOffer.getSpecialOffer(item.type,
+                                                            initialPrice, item.appearances);
+                }
                 int finalPrice = specialOffer.getSpecialOffer(item.type,
                                                             initialPrice, item.appearances);
                 prices[i] = finalPrice;

@@ -126,8 +126,18 @@ public class SpecialOffer {
             return itemKOffer(price, itemsNumber);
         } else if (itemType == 'N') {
             return itemNOffer(price,itemsNumber, appearances);
+        } else if (itemType == 'P') {
+            return itemPOffer(price, itemsNumber);
+        } else if (itemType == 'Q') {
+            return itemQOffer(price, itemsNumber);
+        } else if (itemType == 'R') {
+            return itemROffer(price, itemsNumber, appearances);
+        } else if (itemType == 'U') {
+            return itemUOffer(price, itemsNumber);
+        } else if (itemType == 'V') {
+            return itemVOffer(price, itemsNumber);
         }
-        return 0;
+        return price;
     }
 
 }
