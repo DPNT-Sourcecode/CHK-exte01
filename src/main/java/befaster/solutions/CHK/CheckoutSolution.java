@@ -16,6 +16,11 @@ public class CheckoutSolution {
         }
         return true;
     }
+    
+    public void initialize(String skus) {
+
+        
+    }
 
     public Integer checkout(String skus) {
         
