@@ -87,8 +87,14 @@ public class CheckoutSolution {
             int initialPrice = itr.next().value*itr.next().appearances;
             int finalPrice = specialOffer.getSpecialOffer(itr.next().type,
                                                         initialPrice, itr.next().appearances);
-        
+            prices[i] = finalPrice;
+            i++;
         }
+
+        for (i = 0; i < size; i++) {
+            System.out.print(prices[i] + " ");
+        }
+        System.out.println();
 
         return 0;
     }
@@ -96,7 +102,7 @@ public class CheckoutSolution {
     public static void main(String [] args) {
     	
     	CheckoutSolution s = new CheckoutSolution();
-        int a = s.checkout("ABCDEFFGHIJKDHASFAJFFJFWRWN");
+        int a = s.checkout("AAAAA");
         System.out.println(a);
     }
 
