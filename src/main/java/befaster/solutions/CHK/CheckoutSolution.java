@@ -10,7 +10,8 @@ public class CheckoutSolution {
     public boolean correctInput(String c) {
 
         for (int i = 0; i < c.length(); i++) {
-            if (c.charAt(i).isUpperCase() == false) {
+            char chr = c.charAt(i);
+            if (chr.isUpperCase() == false) {
                 return false;
             }
         }
