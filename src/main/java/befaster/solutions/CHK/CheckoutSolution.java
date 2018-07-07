@@ -1,4 +1,4 @@
-package befaster.solutions.CHK;
+//package befaster.solutions.CHK;
 
 import java.util.*;
 //import befaster.runner.SolutionNotImplementedException;
@@ -67,7 +67,7 @@ public class CheckoutSolution {
            // System.out.print("E");
         }
 
-        if (countA >= 5) {
+ //       if (countA >= 5) {
             while (countA >= 5) {
                 int removed = 0;
                 for (int i = 0; i < size; i++) {
@@ -83,9 +83,9 @@ public class CheckoutSolution {
                 }
               //  System.out.print("A");
             }
-        }
+ //       }
 
-        if (countA >= 3) {
+  //      if (countA >= 3) {
             while (countA >= 3) {
                 int removed = 0;
                 for (int i = 0; i < size; i++) {
@@ -101,10 +101,9 @@ public class CheckoutSolution {
                 }
                 // System.out.print("A2");
             }
+  //      }
 
-        }
-
-        if (countB >= 2) {
+ //       if (countB >= 2) {
             while (countB >= 2) {
                 int removed = 0;
                 for (int i = 0; i < size; i++) {
@@ -120,13 +119,13 @@ public class CheckoutSolution {
                 }
                 // System.out.print("B");
             }
-        }
+//        }
 
-        if ()
         while (countF >= 3) {
             for (int i = 0; i < size; i++) {
                 if (prices[i] == 10) {
-
+                    prices[i] = 0;
+                    countF -= 3;
                 }
             }
         }
@@ -140,11 +139,11 @@ public class CheckoutSolution {
         return sum;
     }
 
-    //     public static void main(String [] args) {
+        public static void main(String [] args) {
     	
-    // 	CheckoutSolution s = new CheckoutSolution();
-    //     int a = s.checkout("ABCDABCDABCDABCDEABCDEABCDE");
-    //     System.out.println(a);
-    // }
+    	CheckoutSolution s = new CheckoutSolution();
+        int a = s.checkout("ABCDEFFF");
+        System.out.println(a);
+    }
 
 }
