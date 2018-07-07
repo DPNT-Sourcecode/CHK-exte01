@@ -131,11 +131,18 @@ public class CheckoutSolution {
         return totalCheckout;
     }
 
-    // public static void main(String [] args) {
-    	
-    // 	CheckoutSolution s = new CheckoutSolution();
-    //     int a = s.checkout("AAAAABBCC");
-    //     System.out.println(a);
-    // }
+   public class Item {
+
+    char type;
+    int value;
+    int appearances;
+
+    public Item(char type, int value) {
+        this.type = type;
+        this.value = value;
+        this.appearances = 0;
+    }
+
+}
 
 }
