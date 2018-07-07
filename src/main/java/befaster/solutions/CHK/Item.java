@@ -11,6 +11,8 @@ public class Item implements Comparable{
     }
 
     @Override
-    
+    public int compareTo(Item a) {
+        return a.type < type;
+    }
 
 }

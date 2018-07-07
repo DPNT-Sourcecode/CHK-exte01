@@ -19,7 +19,14 @@ public class CheckoutSolution {
     
     public void initialize(String skus) {
 
-        items.add(new Item)
+        items.add(new Item('A',50));
+        items.add(new Item('B',30));
+        items.add(new Item('C',20));
+        items.add(new Item('D',15));
+        items.add(new Item('E',40));
+        items.add(new Item('F',10));
+        items.add(new Item('G',20));
+        items.add(new Item('H',)
     }
 
     public Integer checkout(String skus) {
