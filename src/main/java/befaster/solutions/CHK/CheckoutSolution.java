@@ -63,7 +63,21 @@ public class CheckoutSolution {
             } else if (skus.charAt(i) == 'I') {
                 prices[i] = 35;
             } else if (skus.charAt(i) == 'J') {
-                prices[i] = 
+                prices[i] = 60;
+            } else if (skus.charAt(i) == 'K') {
+                prices[i] = 80;
+                items[10]++;
+            } else if (skus.charAt(i) == 'L') {
+                prices[i] = 90;
+            } else if (skus.charAt(i) == 'M') {
+                prices[i] = 15;
+            } else if (skus.charAt(i) == 'N') {
+                prices[i] = 40;
+                items[13]++;
+            } else if (skus.charAt(i) == 'O') {
+                prices[i] = 10;
+            } else if (skus.charAt(i) == 'P') {
+                prices[i] = 50;
             }
         }
 
