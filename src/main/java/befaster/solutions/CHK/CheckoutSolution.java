@@ -46,9 +46,15 @@ public class CheckoutSolution {
         items.add(new Item('Y',10));
         items.add(new Item('Z',50));
 
+
+        f
         Iterator<Item> itr = items.iterator();
         while (itr.hasNext()) {
-            
+            for (int i = 0; i < skus.length(); i++) {
+                if (skus.charAt(i) == itr.next().type) {
+                    itr.next().appearances++;
+                }
+            }
         }
     }
 
