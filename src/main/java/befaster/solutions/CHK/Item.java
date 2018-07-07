@@ -1,4 +1,4 @@
-public class Item implements Comparable<Item>{
+public class Item {
 
     char type;
     int value;
@@ -8,17 +8,6 @@ public class Item implements Comparable<Item>{
         this.type = type;
         this.value = value;
         this.appearances = 0;
-    }
-
-    @Override
-    public int compareTo(Item a) {
-        if (this.type == a.type) {
-            return 0;
-        } else if (this.type < a.type){
-            return -1;
-        } else {
-            return 1;
-        }
     }
 
 }

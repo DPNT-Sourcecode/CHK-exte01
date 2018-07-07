@@ -5,7 +5,7 @@ import java.util.*;
 
 public class CheckoutSolution {
 
-    public ArrayList<Item> items = new TreeSet<Item>();
+    public ArrayList<Item> items = new ArrayList<Item>();
 
     public boolean correctInput(String c) {
 
@@ -52,7 +52,7 @@ public class CheckoutSolution {
             Iterator<Item> itr = items.iterator();
             while (itr.hasNext()) {
                 if (skus.charAt(i) == itr.next().type) {
-                    itr.next().appearances++;
+                    itr.previous().appearances++;
                     break;
                 }
             }
@@ -69,7 +69,8 @@ public class CheckoutSolution {
 
         Iterator<Item> itr = items.iterator();
         while (itr.hasNext()) {
-            System.out.println(itr.next().type + " " + itr.next().appearances);
+            Item item = itr.next();
+            System.out.println(item.type + " " + item.appearances);
         }
         
         if (skus.length() == 0) {
@@ -106,7 +107,7 @@ public class CheckoutSolution {
     public static void main(String [] args) {
     	
     	CheckoutSolution s = new CheckoutSolution();
-        int a = s.checkout("AAAAA");
+        int a = s.checkout("AAAAABBCC");
         System.out.println(a);
     }
 
