@@ -67,7 +67,7 @@ public class CheckoutSolution {
            // System.out.print("E");
         }
 
-        if (countA > 4) {
+        if (countA >= 5) {
             while (countA >= 5) {
                 int removed = 0;
                 for (int i = 0; i < size; i++) {
@@ -85,7 +85,7 @@ public class CheckoutSolution {
             }
         }
 
-        if (countA > 2) {
+        if (countA >= 3) {
             while (countA >= 3) {
                 int removed = 0;
                 for (int i = 0; i < size; i++) {
@@ -104,7 +104,7 @@ public class CheckoutSolution {
 
         }
 
-        if (countB > 1) {
+        if (countB >= 2) {
             while (countB >= 2) {
                 int removed = 0;
                 for (int i = 0; i < size; i++) {
@@ -119,6 +119,15 @@ public class CheckoutSolution {
                     }
                 }
                 // System.out.print("B");
+            }
+        }
+
+        if ()
+        while (countF >= 3) {
+            for (int i = 0; i < size; i++) {
+                if (prices[i] == 10) {
+
+                }
             }
         }
 
