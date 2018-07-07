@@ -55,7 +55,7 @@ public class CheckoutSolution {
                         removed++;
                     }
                     if (removed == 3) {
-                        prices.add(130);
+                        prices[i] = 130;
                         break;
                     }
                 }
@@ -65,13 +65,14 @@ public class CheckoutSolution {
         if (countB > 1) {
             while (countB >= 2) {
                 int removed = 0;
-                for (int i = 0; i < prices.size(); i++) {
-                    if (prices.get(i) == 30) {
-                        prices.remove(i);
+                for (int i = 0; i < size; i++) {
+                    if (prices[i] == 30) {
+                        prices[i] = 0;
+                        countB--;
                         removed++;
                     }
                     if (removed == 2) {
-                        prices.add(45);
+                        prices[i] = 45;
                         break;
                     }
                 }
@@ -79,18 +80,11 @@ public class CheckoutSolution {
         }
 
         int sum = 0;
-        Iterator<Integer> itr1 = prices.iterator();
-        while (itr1.hasNext()) {
-            sum += itr1.next();
+
+        for (int i = 0; i < size; i++) {
+            sum += prices[i];
         }
 
         return sum;
     }
-
-    // public static void main(String [] args) {
-    	
-    // 	CheckoutSolution s = new CheckoutSolution();
-    //     int a = s.checkout("AABBCDAB");
-    //     System.out.println(a);
-    // }
 }
