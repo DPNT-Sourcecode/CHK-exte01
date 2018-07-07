@@ -26,7 +26,23 @@ public class CheckoutSolution {
         items.add(new Item('E',40));
         items.add(new Item('F',10));
         items.add(new Item('G',20));
-        items.add(new Item('H',)
+        items.add(new Item('H',10));
+        items.add(new Item('I',35));
+        items.add(new Item('J',60));
+        items.add(new Item('K',80));
+        items.add(new Item('L',90));
+        items.add(new Item('M',15));
+        items.add(new Item('N',40));
+        items.add(new Item('O',10));
+        items.add(new Item('P',50));
+        items.add(new Item('Q',30));
+        items.add(new Item('R',50));
+        items.add(new Item('S',30));
+        items.add(new Item('T',20));
+        items.add(new Item('U',40));
+        items.add(new Item('V',50));
+        items.add(new Item('W',20));
+        items.add(new Item('X')
     }
 
     public Integer checkout(String skus) {
