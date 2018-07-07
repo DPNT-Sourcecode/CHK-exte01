@@ -1,7 +1,5 @@
 public class SpecialOffer {
 
-    char itemType;
-
     public int itemAOffer(int price, int itemsNumber) {
 
         while (itemsNumber >= 5) {
@@ -17,6 +15,11 @@ public class SpecialOffer {
         return price;
     }
 
-    
+    public int getSpecialOffer(char itemType, int price, int itemsNumber){
+        if (itemType == 'A') {
+            return itemAOffer(price,itemsNumber);
+        }
+        return 0;
+    }
 
 }

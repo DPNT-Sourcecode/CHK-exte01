@@ -85,7 +85,9 @@ public class CheckoutSolution {
 
         while (itr.hasNext()) {
             int initialPrice = itr.next().value*itr.next().appearances;
-            int finalPrice = specialOffer.
+            int finalPrice = specialOffer.getSpecialOffer(itr.next().type,
+                                                        initialPrice, itr.next().appearances);
+        
         }
 
         return 0;
