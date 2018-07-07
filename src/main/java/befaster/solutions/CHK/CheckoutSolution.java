@@ -10,7 +10,7 @@ public class CheckoutSolution {
     public boolean correctInput(String c) {
 
         for (int i = 0; i < c.length(); i++) {
-            if (c.charAt(i).isLowerCase() == true)
+            if (c.charAt(i).isUpperCase() == false)
                 return false;
             }
         }
@@ -42,7 +42,11 @@ public class CheckoutSolution {
         items.add(new Item('U',40));
         items.add(new Item('V',50));
         items.add(new Item('W',20));
-        items.add(new Item('X')
+        items.add(new Item('X',90));
+        items.add(new Item('Y',10));
+        items.add(new Item('Z',50));
+
+        for (int i = 0; i < skus.)
     }
 
     public Integer checkout(String skus) {
