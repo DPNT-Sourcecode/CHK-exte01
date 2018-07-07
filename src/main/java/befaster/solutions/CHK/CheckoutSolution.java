@@ -5,12 +5,10 @@ import java.util.*;
 
 public class CheckoutSolution {
 
-    public boolean correct(String c) {
+    public boolean correctInput(String c) {
 
         for (int i = 0; i < c.length(); i++) {
-            if (c.charAt(i) != 'A' && c.charAt(i) != 'B' && 
-                c.charAt(i) != 'C' && c.charAt(i) != 'D' && 
-                c.charAt(i) != 'E' && c.charAt(i) != 'F') {
+            if (c.charAt(i).isLowerCase() == true)
                 return false;
             }
         }
@@ -26,7 +24,7 @@ public class CheckoutSolution {
             return 0;
         }
 
-        if (!correct(skus)) {
+        if (correctInput(skus) == false) {
             return -1;
         }
         
