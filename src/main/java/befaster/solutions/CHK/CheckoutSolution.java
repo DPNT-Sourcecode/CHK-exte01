@@ -30,6 +30,7 @@ public class CheckoutSolution {
         
         int countA = 0;
         int countB = 0;
+        int countE = 0;
 
         for (int i = 0; i < skus.length(); i++) {
             if (skus.charAt(i) == 'A') {
@@ -42,6 +43,25 @@ public class CheckoutSolution {
                 prices[i] = 20;
             } else if (skus.charAt(i) == 'D') {
                 prices[i] = 15;
+            } else if (skus.charAt(i) == 'E') {
+                prices[i] = 40;
+            }
+        }
+
+        if (countA > 4) {
+            while (countA >= 5) {
+                int removed = 0;
+                for (int i = 0; i < size; i++) {
+                    if (prices[i] == 50) {
+                        prices[i] = 0;
+                        countA--;
+                        removed++;
+                    }
+                    if (removed == 5) {
+                        prices[i] = 200;
+                        break;
+                    }
+                }
             }
         }
 
@@ -87,4 +107,12 @@ public class CheckoutSolution {
 
         return sum;
     }
+
+
+    // public static void main(String [] args) {
+    	
+    // 	CheckoutSolution s = new CheckoutSolution();
+    //     int a = s.checkout("AABBCDAB");
+    //     System.out.println(a);
+    // }
 }
