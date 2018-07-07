@@ -1,4 +1,4 @@
-package befaster.solutions.CHK;
+//package befaster.solutions.CHK;
 
 import java.util.*;
 //import befaster.runner.SolutionNotImplementedException;
@@ -123,10 +123,8 @@ public class CheckoutSolution {
         int totalCheckout = 0;
 
         for (i = 0; i < size; i++) {
-            System.out.print(prices[i] + " ");
             totalCheckout += prices[i];
         }
-        System.out.println();
 
         return totalCheckout;
     }
