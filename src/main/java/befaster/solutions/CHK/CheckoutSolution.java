@@ -1,4 +1,4 @@
-//package befaster.solutions.CHK;
+package befaster.solutions.CHK;
 
 import java.util.*;
 //import befaster.runner.SolutionNotImplementedException;
@@ -17,7 +17,8 @@ public class CheckoutSolution {
 
     public Integer checkout(String skus) {
         
-        ArrayList<Integer> prices = new ArrayList<Integer>();
+        int size = skus.length();
+        Integer [] prices = new Integer[size];
         
         if (skus.length() == 0) {
             return 0;
@@ -26,49 +27,31 @@ public class CheckoutSolution {
         if (!correct(skus)) {
             return -1;
         }
-
-        if (skus.length() == 1) {
-            if (skus.equals("A")) {
-                return 50;
-            } else if (skus.equals("B")) {
-                return 30;
-            } else if (skus.equals("C")) {
-                return 20;
-            } else if (skus.equals("D")) {
-                return 15;
-            }
-        }
         
-        for (int i = 0; i < skus.length(); i++) {
-            if (skus.charAt(i) == 'A') {
-                prices.add(50);
-            } else if (skus.charAt(i) == 'B') {
-                prices.add(30);
-            } else if (skus.charAt(i) == 'C') {
-                prices.add(20);
-            } else if (skus.charAt(i) == 'D') {
-                prices.add(15);
-            }
-        }
-
-        Iterator<Integer> itr = prices.iterator();
         int countA = 0;
         int countB = 0;
-        while (itr.hasNext()) {
-            int a = itr.next();
-            if (a == 50) {
+
+        for (int i = 0; i < skus.length(); i++) {
+            if (skus.charAt(i) == 'A') {
+                prices[i] = 50;
                 countA++;
-            } else if (a == 30) {
+            } else if (skus.charAt(i) == 'B') {
+                prices[i] = 30;
                 countB++;
+            } else if (skus.charAt(i) == 'C') {
+                prices[i] = 20;
+            } else if (skus.charAt(i) == 'D') {
+                prices[i] = 15;
             }
         }
 
         if (countA > 2) {
             while (countA >= 3) {
                 int removed = 0;
-                for (int i = 0; i < prices.size(); i++) {
-                    if (prices.get(i) == 50) {
-                        prices.remove(i);
+                for (int i = 0; i < size; i++) {
+                    if (prices[i] == 50) {
+                        prices[i] = 0;
+                        countA--;
                         removed++;
                     }
                     if (removed == 3) {
@@ -104,10 +87,10 @@ public class CheckoutSolution {
         return sum;
     }
 
-    public static void main(String [] args) {
+    // public static void main(String [] args) {
     	
-    	CheckoutSolution s = new CheckoutSolution();
-        int a = s.checkout("AABBCDAB");
-        System.out.println(a);
-    }
+    // 	CheckoutSolution s = new CheckoutSolution();
+    //     int a = s.checkout("AABBCDAB");
+    //     System.out.println(a);
+    // }
 }
