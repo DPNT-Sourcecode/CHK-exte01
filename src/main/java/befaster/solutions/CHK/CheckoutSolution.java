@@ -15,6 +15,8 @@ public class CheckoutSolution {
         return true;
     }
 
+    public void setValues()
+
     public Integer checkout(String skus) {
         
         int size = skus.length();
@@ -33,28 +35,28 @@ public class CheckoutSolution {
             return -1;
         }
         
-        int countA = 0;
-        int countB = 0;
-        int countE = 0;
-        int countF = 0;
+        // int countA = 0;
+        // int countB = 0;
+        // int countE = 0;
+        // int countF = 0;
 
         for (int i = 0; i < skus.length(); i++) {
             if (skus.charAt(i) == 'A') {
                 prices[i] = 50;
-                count[0]++;
+                items[0]++;
             } else if (skus.charAt(i) == 'B') {
                 prices[i] = 30;
-                countB++;
+                items[1]++;
             } else if (skus.charAt(i) == 'C') {
                 prices[i] = 20;
             } else if (skus.charAt(i) == 'D') {
                 prices[i] = 15;
             } else if (skus.charAt(i) == 'E') {
                 prices[i] = 40;
-                countE++;
+                items[4]++;
             } else if (skus.charAt(i) == 'F') {
                 prices[i] = 10;
-                countF++;
+                items[5]++;
             }
         }
 
