@@ -49,7 +49,7 @@ public class CheckoutSolution {
             }
         }
 
-        while (countE >= 2) {
+        while (countE >= 2 && countB != 0) {
             for (int i = 0; i < size; i++) {
                 if (prices[i] == 30) {
                     prices[i] = 0;
@@ -93,8 +93,9 @@ public class CheckoutSolution {
                         break;
                     }
                 }
+                            System.out.print("A2");
             }
-            
+
         }
 
         if (countB > 1) {
@@ -111,6 +112,7 @@ public class CheckoutSolution {
                         break;
                     }
                 }
+                            System.out.print("B");
             }
         }
 
