@@ -80,13 +80,14 @@ public class CheckoutSolution {
             return -1;
         }
 
-        itr = items.iterator();
+        Iterator<Item> itr1 = items.iterator();
         int i = 0;
 
-        while (itr.hasNext()) {
-            int initialPrice = itr.next().value*itr.next().appearances;
-            int finalPrice = specialOffer.getSpecialOffer(itr.next().type,
-                                                        initialPrice, itr.next().appearances);
+        while (itr1.hasNext() && i < size) {
+            Item item = itr1.next();
+            int initialPrice = item.value*item.appearances;
+            int finalPrice = specialOffer.getSpecialOffer(item.type,
+                                                        initialPrice, item.appearances);
             prices[i] = finalPrice;
             i++;
         }
