@@ -8,7 +8,7 @@ public class CheckoutSolution {
     public boolean correct(String c) {
 
         for (int i = 0; i < c.length(); i++) {
-            if (c.charAt(i) != 'A' && c.charAt(i) != 'B' && c.charAt(i) != 'C' && c.charAt(i) != 'D' && ) {
+            if (c.charAt(i) != 'A' && c.charAt(i) != 'B' && c.charAt(i) != 'C' && c.charAt(i) != 'D' && c.charAt(i) != 'E') {
                 return false;
             }
         }
@@ -45,6 +45,7 @@ public class CheckoutSolution {
                 prices[i] = 15;
             } else if (skus.charAt(i) == 'E') {
                 prices[i] = 40;
+                countE++;
             }
         }
 
@@ -117,7 +118,7 @@ public class CheckoutSolution {
     public static void main(String [] args) {
     	
     	CheckoutSolution s = new CheckoutSolution();
-        int a = s.checkout("AABBCDABEE");
+        int a = s.checkout("AABBCDAEE");
         System.out.println(a);
     }
 }
