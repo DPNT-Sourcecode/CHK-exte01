@@ -1,4 +1,4 @@
-//package befaster.solutions.CHK;
+package befaster.solutions.CHK;
 
 import java.util.*;
 //import befaster.runner.SolutionNotImplementedException;
@@ -70,12 +70,6 @@ public class CheckoutSolution {
         
         initialize(skus);
 
-        // Iterator<Item> itr = items.iterator();
-        // while (itr.hasNext()) {
-        //     Item item = itr.next();
-        //     System.out.println(item.type + " " + item.appearances);
-        // }
-        
         if (skus.length() == 0) {
             return 0;
         }
@@ -137,11 +131,11 @@ public class CheckoutSolution {
         return totalCheckout;
     }
 
-    public static void main(String [] args) {
+    // public static void main(String [] args) {
     	
-    	CheckoutSolution s = new CheckoutSolution();
-        int a = s.checkout("AAAAABBCC");
-        System.out.println(a);
-    }
+    // 	CheckoutSolution s = new CheckoutSolution();
+    //     int a = s.checkout("AAAAABBCC");
+    //     System.out.println(a);
+    // }
 
 }
