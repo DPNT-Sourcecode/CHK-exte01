@@ -5,7 +5,7 @@ import java.util.*;
 
 public class CheckoutSolution {
 
-    public ArrayList<Item> items = new ArrayList<Item>();
+    public TreeSet<Item> items = new TreeSet<Item>();
 
     public boolean correctInput(String c) {
 
@@ -19,7 +19,7 @@ public class CheckoutSolution {
     
     public void initialize(String skus) {
 
-        
+        items.add(new Item)
     }
 
     public Integer checkout(String skus) {
