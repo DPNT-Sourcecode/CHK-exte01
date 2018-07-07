@@ -85,7 +85,7 @@ public class CheckoutSolution {
         int itemMApp = 0;
         int itemQApp = 0;
 
-        for (Item item : item) {
+        for (Item item : items) {
             if (item.type == 'B') {
                 itemBApp = item.appearances;
             } 
@@ -105,11 +105,17 @@ public class CheckoutSolution {
                 System.out.println("final: " + item.type + " " + item.value + " " + item.appearances);
                 int initialPrice = item.value*item.appearances;
                 if (item.type == 'E') {
-                    int finalPrice = specialOffer.getSpecialOffer(item.type,
-                                                            initialPrice, itemBApp);
-                } else if (item.type == 'N')
-                int finalPrice = specialOffer.getSpecialOffer(item.type,
-                                                            initialPrice, item.appearances);
+                    int finalPrice = specialOffer.getSpecialOffer(item.type, initialPrice, 
+                                                                item.appearances, itemBApp);
+                } else if (item.type == 'N') {
+                    int finalPrice = specialOffer.getSpecialOffer(item.type, initialPrice, 
+                                                                    item.appearances, itemMApp);
+                } else if (item.type == 'R') {
+                    int finalPrice = specialOffer.getSpecialOffer(item.type, initialPrice,
+                                                                    item.appearances, itemQApp);
+                } else {
+                int finalPrice = specialOffer.getSpecialOffer(item.type, initialPrice, 0);
+                }
                 prices[i] = finalPrice;
                 i++;
             }
@@ -119,7 +125,7 @@ public class CheckoutSolution {
 
         for (i = 0; i < size; i++) {
             System.out.print(prices[i] + " ");
-            totalCheckout += prices[i]
+            totalCheckout += prices[i];
         }
         System.out.println();
 

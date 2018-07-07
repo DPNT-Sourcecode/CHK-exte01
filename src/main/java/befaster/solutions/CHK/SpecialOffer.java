@@ -64,7 +64,7 @@ public class SpecialOffer {
     public int itemPOffer(int price, int itemsNumber) {
 
         while (itemsNumber >= 5) {
-            price -= 50
+            price -= 50;
             itemsNumber -= 5;
         }
         return price;
