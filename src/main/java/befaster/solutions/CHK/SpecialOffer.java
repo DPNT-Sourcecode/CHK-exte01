@@ -79,6 +79,16 @@ public class SpecialOffer {
         return price;
     }
 
+    public int itemROffer(int price, int itemsNumber, int appearancesQ) {
+
+        while (itemsNumber >= 3 && appearancesQ > 0) {
+            price -= 30;
+            itemsNumber -= 3;
+            appearancesQ--;
+        }
+        return price;
+    }
+
     public int itemUOffer(int price, int itemsNumber) {
 
         while (itemsNumber >= 4) {
@@ -103,13 +113,19 @@ public class SpecialOffer {
     }
 
 
-    public int getSpecialOffer(char itemType, int price, int itemsNumber, int appearancesB, int appearancesM){
+    public int getSpecialOffer(char itemType, int price, int itemsNumber, int appearances){
         if (itemType == 'A') {
             return itemAOffer(price,itemsNumber);
         } else if (itemType == 'B') {
             return itemBOffer(price, itemsNumber);
         } else if (itemType == 'E') {
-            return itemEOffer(price,itemsNumber, )
+            return itemEOffer(price,itemsNumber, appearances);
+        } else if (itemType == 'F') {
+            return itemFOffer(price, itemsNumber);
+        } else if (itemType == 'K') {
+            return itemKOffer(price, itemsNumber);
+        } else if (itemType == 'N') {
+            return itemNOffer(price,itemsNumber, appearances);
         }
         return 0;
     }
