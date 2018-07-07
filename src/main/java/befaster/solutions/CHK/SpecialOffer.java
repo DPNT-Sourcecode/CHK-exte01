@@ -23,11 +23,12 @@ public class SpecialOffer {
         return price;
     }
 
-    public int itemEOffer(int price, int itemsNumber, int appearances) {
+    public int itemEOffer(int price, int itemsNumber, int appearancesB) {
 
-        while (itemsNumber >= 2) {
+        while (itemsNumber >= 2 && appearancesB > 0) {
             price -= 30;
             itemsNumber -= 2;
+            appearancesB--;
         }
         return price;
     }
@@ -46,6 +47,16 @@ public class SpecialOffer {
         while (itemsNumber >= 2) {
             price -= 10;
             itemsNumber -= 2;
+        }
+        return price;
+    }
+
+    public int itemNOffer(int price, int itemsNumber, int appearancesM) {
+
+        while (itemsNumber >= 3 && appearancesM > 0) {
+            price -= 15;
+            itemsNumber -= 3;
+            appearancesM--;
         }
         return price;
     }
@@ -92,9 +103,13 @@ public class SpecialOffer {
     }
 
 
-    public int getSpecialOffer(char itemType, int price, int itemsNumber){
+    public int getSpecialOffer(char itemType, int price, int itemsNumber, int appearancesB, int appearancesM){
         if (itemType == 'A') {
             return itemAOffer(price,itemsNumber);
+        } else if (itemType == 'B') {
+            return itemBOffer(price, itemsNumber);
+        } else if (itemType == 'E') {
+            return itemEOffer(price,itemsNumber, )
         }
         return 0;
     }
