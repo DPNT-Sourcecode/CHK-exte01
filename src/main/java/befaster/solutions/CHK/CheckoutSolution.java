@@ -86,10 +86,10 @@ public class CheckoutSolution {
         while (itr1.hasNext() && i < size) {
             Item item = itr1.next();
             if (item.appearances != 0) {
+                System.out.println("final: " + item.type + " " + item.value + " " + item.appearances);
                 int initialPrice = item.value*item.appearances;
                 int finalPrice = specialOffer.getSpecialOffer(item.type,
                                                             initialPrice, item.appearances);
-                System.out.println("final: " + item.value);
                 prices[i] = finalPrice;
                 i++;
             }
