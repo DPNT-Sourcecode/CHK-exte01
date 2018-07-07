@@ -11,7 +11,7 @@ public class CheckoutSolution {
 
         for (int i = 0; i < c.length(); i++) {
             char chr = c.charAt(i);
-            if (chr.isUpperCase() == false) {
+            if (!Character.isUpperCase(chr)) {
                 return false;
             }
         }
