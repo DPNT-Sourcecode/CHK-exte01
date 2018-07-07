@@ -1,4 +1,4 @@
-//package befaster.solutions.CHK;
+package befaster.solutions.CHK;
 
 import java.util.*;
 //import befaster.runner.SolutionNotImplementedException;
