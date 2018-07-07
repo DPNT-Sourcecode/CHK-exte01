@@ -51,7 +51,28 @@ public class SpecialOffer {
         return price;
     }
 
-    
+    public int itemPOffer(int price, int itemsNumber) {
+
+        while (itemsNumber >= 5) {
+            price -= 50
+            itemsNumber -= 5;
+        }
+        return price;
+    }
+
+    public int itemQOffer(int price, int itemsNumber) {
+
+        while (itemsNumber >= 3) {
+            price -= 10;
+            itemsNumber -= 3;
+        }
+        return price;
+    }
+
+    public int itemUOffer(int price, int itemsNumber) {
+
+        while (itemsNumber)
+    }
 
 
     public int getSpecialOffer(char itemType, int price, int itemsNumber){
