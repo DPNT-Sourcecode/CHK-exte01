@@ -63,14 +63,18 @@ public class CheckoutSolution {
         int size = skus.length();
         Integer [] prices = new Integer[size];
         SpecialOffer specialOffer = new SpecialOffer();
+
+        for (int i = 0; i < size; i++) {
+            prices[i] = 0;
+        }
         
         initialize(skus);
 
-        Iterator<Item> itr = items.iterator();
-        while (itr.hasNext()) {
-            Item item = itr.next();
-            System.out.println(item.type + " " + item.appearances);
-        }
+        // Iterator<Item> itr = items.iterator();
+        // while (itr.hasNext()) {
+        //     Item item = itr.next();
+        //     System.out.println(item.type + " " + item.appearances);
+        // }
         
         if (skus.length() == 0) {
             return 0;
@@ -102,19 +106,20 @@ public class CheckoutSolution {
                 break;
             }
             if (item.appearances != 0) {
-                System.out.println("final: " + item.type + " " + item.value + " " + item.appearances);
                 int initialPrice = item.value*item.appearances;
+                int finalPrice;
                 if (item.type == 'E') {
-                    int finalPrice = specialOffer.getSpecialOffer(item.type, initialPrice, 
+                    finalPrice = specialOffer.getSpecialOffer(item.type, initialPrice, 
                                                                 item.appearances, itemBApp);
                 } else if (item.type == 'N') {
-                    int finalPrice = specialOffer.getSpecialOffer(item.type, initialPrice, 
+                    finalPrice = specialOffer.getSpecialOffer(item.type, initialPrice, 
                                                                     item.appearances, itemMApp);
                 } else if (item.type == 'R') {
-                    int finalPrice = specialOffer.getSpecialOffer(item.type, initialPrice,
+                    finalPrice = specialOffer.getSpecialOffer(item.type, initialPrice,
                                                                     item.appearances, itemQApp);
                 } else {
-                int finalPrice = specialOffer.getSpecialOffer(item.type, initialPrice, 0);
+                finalPrice = specialOffer.getSpecialOffer(item.type, initialPrice,
+                                                                item.appearances, 0);
                 }
                 prices[i] = finalPrice;
                 i++;

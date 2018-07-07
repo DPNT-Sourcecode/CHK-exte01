@@ -33,7 +33,7 @@ public class SpecialOffer {
         return price;
     }
 
-    public int itemsFOffer(int price, int itemsNumber) {
+    public int itemFOffer(int price, int itemsNumber) {
 
         while (itemsNumber >= 3) {
             price -= 10;
