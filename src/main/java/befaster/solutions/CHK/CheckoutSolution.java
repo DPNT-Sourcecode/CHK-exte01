@@ -81,6 +81,21 @@ public class CheckoutSolution {
         }
 
         int i = 0;
+        int itemBApp = 0;
+        int itemMApp = 0;
+        int itemQApp = 0;
+
+        for (Item item : item) {
+            if (item.type == 'B') {
+                itemBApp = item.appearances;
+            } 
+            if (item.type == 'M') {
+                itemMApp = item.appearances;
+            }
+            if (item.type == 'Q') {
+                itemQApp = item.appearances;
+            }
+        }
 
         for (Item item : items) {
             if (i >= size) {
@@ -91,8 +106,8 @@ public class CheckoutSolution {
                 int initialPrice = item.value*item.appearances;
                 if (item.type == 'E') {
                     int finalPrice = specialOffer.getSpecialOffer(item.type,
-                                                            initialPrice, item.appearances);
-                }
+                                                            initialPrice, itemBApp);
+                } else if (item.type == 'N')
                 int finalPrice = specialOffer.getSpecialOffer(item.type,
                                                             initialPrice, item.appearances);
                 prices[i] = finalPrice;
